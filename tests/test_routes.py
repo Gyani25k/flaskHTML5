@@ -11,12 +11,12 @@ def client():
 def test_home_page(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b"Welcome to our Flask Website" in response.data
+    assert b"Home | HTML5" in response.data
 
 def test_about_page(client):
     response = client.get('/about')
     assert response.status_code == 200
-    assert b"About Us" in response.data
+    assert b"About Us | HTML5" in response.data
 
 def test_contact_page(client):
     response = client.get('/contact-us')
