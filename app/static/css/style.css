@@ -8640,3 +8640,41 @@ input, select, textarea {
 				background-color: #4a5361;
 				border-radius: 3px;
 			}
+
+			        /* Mobile menu button */
+					.menu-toggle {
+						display: none;
+						background: none;
+						border: none;
+						color: white;
+						font-size: 1.5rem;
+						cursor: pointer;
+					}
+					
+					/* Media query for mobile devices */
+					@media screen and (max-width: 768px) {
+						#nav {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+						}
+						#nav ul {
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							width: 100%;
+							background-color: #333;
+							padding: 1rem;
+						}
+						#nav ul.show {
+							display: block;
+						}
+						#nav ul li {
+							display: block;
+							margin: 1rem 0;
+						}
+						.menu-toggle {
+							display: block;
+						}
+					}
